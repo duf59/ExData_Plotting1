@@ -18,8 +18,8 @@ data$Time <- NULL
 
 # Subset : we consider only data from the dates 2007-02-01 and 2007-02-02
 start  <- ymd("2007-02-01")
-end    <- ymd("2007-02-02")
-period <- interval(start,end)
+end    <- ymd("2007-02-03")
+period <- interval(start,end) # 2 days period
 data   <- data[DateTime %within% period,]
 
 # Convert to numeric
