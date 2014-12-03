@@ -31,10 +31,6 @@ data <- data[, lapply(.SD, as.numeric), by=DateTime] # convert data to numeric
 
 # part 2 : generate the plot ####
 
-# first compute the average Global_active_power (GAP) per weekday
-# data[,weekday := wday(data$DateTime, label = TRUE)]
-# meanGAP <- data[, test=mean(Global_active_power), by = weekday]
-
 # export plot to png
 png(file = "plot3.png", bg = "transparent", type = "cairo-png") # default size is 480*480
 with(data, plot(DateTime,Sub_metering_1, type = "n", xlab = NA, ylab = "Energy sub metering"))
