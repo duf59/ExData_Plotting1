@@ -27,7 +27,7 @@ data <- data[, lapply(.SD, as.numeric), by=DateTime] # convert data to numeric
 
 # part 2 : generate the plot ####
 
-png(file = "plot1.png", bg = "transparent") # default size is 480*480
+png(file = "plot1.png", bg = "transparent", type = "cairo-png") # default size is 480*480
 hist(data$Global_active_power, col = "red",
      main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)")
